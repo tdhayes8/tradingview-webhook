@@ -24,7 +24,7 @@ With Gunicorn (Production ready features like worker processes)
 ```bash
 gunicorn -w 2 -b 0.0.0.0:5002 webhook_ibkr:app       //user might need to precede this command with "python3 -m"
 ```
--w 2: number of worker processes
+-w 2: number of worker processes (can be increased for potentially lower latency)
 
 -b: bind address and port
 
