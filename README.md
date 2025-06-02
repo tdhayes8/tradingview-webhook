@@ -9,7 +9,7 @@ Receive TradingView webhook alerts and place real-time trades via Interactive Br
 - Python 3.8+
 - [IB Gateway or TWS](https://www.interactivebrokers.com/en/trading/ib-gateway.php) running locally
 - IB API port (default paper: `7497`). Do not switch to live trading (default port 7496) until you've thoroughly tested your setup!
-- TradingView account (to send alerts)
+- TradingView account (to send alerts from pinescript strategies)
 - ngrok (or Cloudflare tunnel with a custom subdomain) for public webhook access
 
 Install dependencies:
