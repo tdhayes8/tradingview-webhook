@@ -8,7 +8,7 @@ Receive TradingView webhook alerts and place real-time trades via Interactive Br
 
 - Python 3.8+
 - [IB Gateway or TWS](https://www.interactivebrokers.com/en/trading/ib-gateway.php) running locally
-- IB API port (default paper: `7497`)... DO NOT SWITCH TO LIVE PORT 7496 UNTIL COMPLETELY TESTED AND READY.
+- IB API port (default paper: `7497`). Do not switch to live trading (default port 7496) until you've thoroughly tested your setup!
 - TradingView account (to send alerts)
 - ngrok (or Cloudflare tunnel with a custom subdomain) for public webhook access
 
@@ -22,7 +22,7 @@ pip install flask ib_insync gunicorn
 
 With Gunicorn (Production ready features like worker processes)
 ```bash
-gunicorn -w 2 -b 0.0.0.0:5002 webhook_ibkr:app       --might need to precede this command with "python3 -m"
+gunicorn -w 2 -b 0.0.0.0:5002 webhook_ibkr:app       //user might need to precede this command with "python3 -m"
 ```
 -w 2: number of worker processes
 
@@ -55,8 +55,8 @@ Message Body:
 
 ## Security Notes
 
-Your script places live market orders. Use paper trading for testing.
-Protect your webhook URL — do not expose it publicly or in unsecured environments.
+Your script can place live market orders. Use paper trading for testing first!
+Protect your webhook URL — do not expose it publicly or in unsecured environments. If infiltrated, hackers could send fake signals that place unwanted orders.
 
 
 ## Testing
@@ -66,4 +66,4 @@ Test Locally (using a third terminal)
 curl -X POST http://localhost:5002/webhook -H "Content-Type: application/json" -d '{"signal": "buy"}'
 
 
-To Test in Tradingview: I recommended making a strategy that will execute very often like one that buys/sells red or green candles.
+To Test in Tradingview: I recommended making a strategy that will execute very often like one that buys and sells red or green candles.
