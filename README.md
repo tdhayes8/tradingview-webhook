@@ -76,6 +76,7 @@ To Test in Tradingview: I recommended making a strategy that will execute very o
 Go to: https://dashboard.ngrok.com/signup
 Create a free account
 After signing up, go to the Auth Token page to get your token — you’ll need it to connect the CLI to your account
+
 🔸 2. Download ngrok
 For macOS / Linux / Windows:
 
@@ -86,6 +87,7 @@ Download the version for your OS:
 Mac: unzip and move to /usr/local/bin
 Windows: unzip it and place ngrok.exe somewhere in your system PATH or run it from the unzipped folder
 Linux: unzip and move to /usr/local/bin or similar
+
 🔸 3. Install the Authtoken
 Once downloaded, open a terminal (Command Prompt / Terminal / PowerShell) and run:
 
