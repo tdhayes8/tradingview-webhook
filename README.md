@@ -15,23 +15,12 @@ Receive TradingView webhook alerts and place real-time trades via Interactive Br
 Install dependencies:
 
 ```bash
-pip install flask ib_insync gunicorn
+pip install flask ib_insync
 ```
 
-## Run the Webhook Server
+## Run the local Flask Webhook Server .py file
 
-With Gunicorn (Production ready features like worker processes)
-```bash
-gunicorn -w 2 -b 0.0.0.0:5002 webhook_ibkr:app       //user might need to precede this command with "python3 -m"
-```
--w 2: number of worker processes (can be increased for potentially lower latency)
-
--b: bind address and port
-
-webhook_ibkr:app: Flask app object
-
-This starts your Flask app via Gunicorn on port 5002.
-
+Run webhook_ibkr.py
 
 ## Expose to the Internet
 
@@ -54,6 +43,7 @@ Message Body:
   "signal": "{{strategy.order.action}}"
 }
 
+Note: One must edit their strategy's entries and exits to have a comment "long/short entry/exit".
 
 ## Security Notes
 
