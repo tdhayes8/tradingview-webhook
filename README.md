@@ -1,4 +1,4 @@
-# TradingView to IBKR Webhook Signal Automation
+# TradingView to IBKR automated trading via webhook setup
 
 Receive TradingView webhook alerts and place real-time trades via Interactive Brokers using `ib_insync`.
 
