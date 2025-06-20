@@ -55,7 +55,7 @@ Protect your webhook URL — do not expose it publicly or in unsecured environme
 
 Test Locally (using a third terminal)
 
-curl -X POST http://localhost:5002/webhook -H "Content-Type: application/json" -d '{"signal": "buy"}'
+curl -X POST http://localhost:5002/webhook -H "Content-Type: application/json" -d '{"signal": "long entry"}'
 
 
 To Test in Tradingview: I recommended making a strategy that will execute very often like one that buys and sells red or green candles.
